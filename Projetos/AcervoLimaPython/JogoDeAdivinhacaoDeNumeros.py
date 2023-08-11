@@ -12,9 +12,9 @@ import math
 
 # Definindo a função de adivinhação
 
-lower = int(input("Enter Lower bound:- ")) # Definindo o limite inferior
+lower = int(input("Enter Lower bound: ")) # Definindo o limite inferior
 
-upper = int(input("Enter Upper bound:- ")) # Definindo o limite superior
+upper = int(input("Enter Upper bound: ")) # Definindo o limite superior
 
 x = random.randint(lower, upper) # Definindo o número aleatório
 
@@ -23,12 +23,11 @@ print("\n\tYou've only ", round(math.log(upper - lower + 1, 2)), " chances to gu
 count = 0 # Definindo o contador
 
 
-While count < math.log(upper - lower + 1, 2): # Definindo o loop
+while count < math.log(upper - lower + 1, 2): # Definindo o loop
     count += 1 # Definindo o contador
     guess = int(input("Guess a number:- ")) # Definindo o palpite
     if x == guess: # Definindo a condição
         print("Congratulations you did it in ", count, " try") # Definindo a mensagem de parabéns
-        
         break # Definindo o break
     elif x > guess: # Definindo a condição
         print("You guessed too small!") # Definindo a mensagem de erro
